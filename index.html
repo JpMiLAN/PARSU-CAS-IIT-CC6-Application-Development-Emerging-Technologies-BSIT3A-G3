@@ -86,7 +86,7 @@
     <div class="header-bottom skewBg" data-header >
       <div class="container" >
 
-        <a href="#" class="logo" style="margin-left: -13.5%!important">BSIT3A | Group 3</a>
+        <a href="#" class="logo" style="margin-left: -13.5%!important">BSIT3A | G3</a>
 
         <nav class="navbar" data-navbar>
           <ul class="navbar-list">
@@ -356,7 +356,7 @@ Synopsis: This game was based on the ongoing Kdrama Movie Entitled “Duty After
         -->
 <br>
         <section class="section live-match" id="video" aria-label="live match">
-          <div class="container">
+          <div class="container" >
 
             <h2 class="h2 section-title">
               <!-- Watch  --><span class="span">Tutorials</span>
@@ -397,22 +397,41 @@ Synopsis: This game was based on the ongoing Kdrama Movie Entitled “Duty After
               </figure>
 
             </div> -->
-            <video  controls width="100%" height="80%"  muted="" loop autoplay="" >
 
-    <source src="New folder/tutorials.mp4">
+            <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+            <video id="movie1" src="New folder/tutorials.mp4"  controls width="100%" autoplay="" loop="" muted="10%" >
+
+   <script>
+
+  let options = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 1.0
+  };
+  let callback = (entries, observer)=>{
+    entries.forEach(entry =>{
+      if(entry.target.id == 'vid')
+      {
+        if(entry.isIntersecting){
+        entry.target.play();
+      }
+      else{
+        entry.target.pause();
+      }
+
+      }
+    }};
+  
+  let observer = new IntersectionObserver(callback, options);
+  observer.observe(document.querySelector('#vid'));
+</script>
+
 </video>
 
           </div>
         </section>
 
       </div>
-
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-
 
 
 
@@ -440,8 +459,8 @@ Synopsis: This game was based on the ongoing Kdrama Movie Entitled “Duty After
                 <div class="card-content">
 
                   <h3 class="h3">
-                    <a href="#" class="card-title" tabindex="-1">
-                      Dj <span class="span">Trooper</span>
+                    <a href="#" class="card-title" tabindex="-1" >
+                      <a href="#" class="card-badge skewBg">Dj Trooper</a>
                     </a>
                   </h3>
 
@@ -454,7 +473,7 @@ Synopsis: This game was based on the ongoing Kdrama Movie Entitled “Duty After
 
                 <div class="card-content-overlay" style="text-align: justify-all;">
 
-                  <img src="./assets/images/featured-game-icon.png" width="36" height="61" loading="lazy" alt=""
+                  <img src="./assets/images/05.png" width="150" height="150" loading="lazy" alt=""
                     class="card-icon">
 
                   <h3 class="h3">
@@ -495,7 +514,7 @@ Synopsis: This game was based on the ongoing Kdrama Movie Entitled “Duty After
 
                   <h3 class="h3">
                     <a href="#" class="card-title" tabindex="-1">
-                      Grey <span class="span">Trooper</span>
+                      <a href="#" class="card-badge skewBg">Grey Trooper</a>
                     </a>
                   </h3>
 
@@ -508,7 +527,7 @@ Synopsis: This game was based on the ongoing Kdrama Movie Entitled “Duty After
 
                 <div class="card-content-overlay" style="text-align: justify-all;">
 
-                  <img src="./assets/images/featured-game-icon.png" width="36" height="61" loading="lazy" alt=""
+                  <img src="./assets/images/05.png" width="150" height="150" loading="lazy" alt=""
                     class="card-icon">
 
                   <h3 class="h3">
@@ -549,7 +568,7 @@ Synopsis: This game was based on the ongoing Kdrama Movie Entitled “Duty After
 
                   <h3 class="h3">
                     <a href="#" class="card-title" tabindex="-1">
-                      Red <span class="span">Trooper</span>
+                      <a href="#" class="card-badge skewBg">Red Trooper</a>
                     </a>
                   </h3>
 
@@ -562,7 +581,7 @@ Synopsis: This game was based on the ongoing Kdrama Movie Entitled “Duty After
 
                 <div class="card-content-overlay" style="text-align: justify-all;">
 
-                  <img src="./assets/images/featured-game-icon.png" width="36" height="61" loading="lazy" alt=""
+                  <img src="./assets/images/06.png" width="150" height="150" loading="lazy" alt=""
                     class="card-icon">
 
                   <h3 class="h3">
@@ -590,14 +609,13 @@ Synopsis: This game was based on the ongoing Kdrama Movie Entitled “Duty After
 
                 <div class="card-content-overlay">
 
-                  <img src="./assets/images/featured-game-icon.png" width="36" height="61" loading="lazy" alt=""
-                    class="card-icon">
+                 
 
                   <div class="card-content">
 
                   <h3 class="h3">
                     <a href="#" class="card-title" tabindex="-1">
-                      Dark <span class="span">Trooper</span>
+                      <a href="#" class="card-badge skewBg">Dj Trooper</a>
                     </a>
                   </h3>
 
@@ -610,7 +628,7 @@ Synopsis: This game was based on the ongoing Kdrama Movie Entitled “Duty After
 
                 <div class="card-content-overlay" style="text-align: justify-all;">
 
-                  <img src="./assets/images/featured-game-icon.png" width="36" height="61" loading="lazy" alt=""
+                  <img src="./assets/images/07.png" width="150" height="150" loading="lazy" alt=""
                     class="card-icon">
 
                   <h3 class="h3">
@@ -632,11 +650,7 @@ Synopsis: This game was based on the ongoing Kdrama Movie Entitled “Duty After
                     </div>
                   </h3>
 
-                  <span class="card-meta">
-                    <ion-icon name="notifications"></ion-icon>
-
-                    <span class="span">Playstation 5, Xbox</span>
-                  </span>
+                 
 
                 </div>
 
@@ -655,7 +669,7 @@ Synopsis: This game was based on the ongoing Kdrama Movie Entitled “Duty After
 
                   <h3 class="h3">
                     <a href="#" class="card-title" tabindex="-1">
-                      Just for <span class="span">Gamers</span>
+                     <a href="#" class="card-badge skewBg">Dark Trooper</a>
                     </a>
                   </h3>
 
@@ -665,14 +679,13 @@ Synopsis: This game was based on the ongoing Kdrama Movie Entitled “Duty After
 
                 <div class="card-content-overlay">
 
-                  <img src="./assets/images/featured-game-icon.png" width="36" height="61" loading="lazy" alt=""
-                    class="card-icon">
+                  
 
                   <div class="card-content">
 
                   <h3 class="h3">
                     <a href="#" class="card-title" tabindex="-1">
-                      Dj <span class="span">Trooper</span>
+                      <a href="#" class="card-badge skewBg">Dark Trooper</a>
                     </a>
                   </h3>
 
@@ -685,7 +698,7 @@ Synopsis: This game was based on the ongoing Kdrama Movie Entitled “Duty After
 
                 <div class="card-content-overlay" style="text-align: justify-all;">
 
-                  <img src="./assets/images/featured-game-icon.png" width="36" height="61" loading="lazy" alt=""
+                  <img src="./assets/images/08.png" width="150" height="150" loading="lazy" alt=""
                     class="card-icon">
 
                   <h3 class="h3">
@@ -739,35 +752,56 @@ Synopsis: This game was based on the ongoing Kdrama Movie Entitled “Duty After
             <!-- Compete with 100 players on a remote island for winner takes showdown known issue where certain skin
             strategic -->
           </p>
+          </ul>
+<ul class="has-scrollbar">
 
-          <ul class="has-scrollbar">
             <li class="scrollbar-item">
-              <div class="shop-card">
+              <div class="featured-game-card">
 
-                <figure class="card-banner img-holder" style="--width: 300; --height: 260; background-color: transparent;">
-                  <img src="./assets/images/3.jpg" width="300" height="260" loading="lazy"
-                    alt="GeForce RTX 2070" class="img-cover">
+                <figure class="card-banner img-holder" style="--width: 450; --height: 600;">
+                  <img src="./assets/images/3.jpg" width="450" height="600" loading="lazy"
+                    alt="Just for Gamers" class="img-cover">
                 </figure>
 
-                <div class="card-content" >
-
-                  <a href="#" class="card-badge skewBg">city</a>
+                <div class="card-content">
 
                   <h3 class="h3">
-                    <a href="#" class="card-title">crab monster (Easy)</a>
+                    <a href="#" class="card-title" tabindex="-1" >
+                       <a href="#" class="card-badge skewBg">crab monster (Easy)</a>
+                    </a>
                   </h3>
 
-                  <div class="card-wrapper">
-                    <p class="card-price" style="color: white;">Health Points:</a> <div class="card-price ">45</div></p>
+                  <!-- <span class="card-meta">
+                    <ion-icon name="notifications"></ion-icon>
+
+                    <!-- <span class="span">Playstation 5, Xbox</span> -->
+                  </span>
+                </div>
+
+                <div class="card-content-overlay" style="text-align: justify-all;">
+
+                  <img src="./assets/images/01.png" width="150" height="150" loading="lazy" alt=""
+                    class="card-icon">
+
+                  <h3 class="h3">
+                    <h3 class="h3">
+                    <div href="#" class="card-title">
+                      Health Points: <span class="span" style="margin-left: 8%"> 45</span>
+                    </div>
+
                     
-                  </div>
-                  <div class="card-wrapper">
-                    <p class="card-price" style="color: white;">Movement Speed:</a> <div class="card-price" style="padding-right: 25px;">5</div></p>
+                    <div href="#" class="card-title">
+                      Movement Speed: <span class="span">5</span>
+                    </div>
+                    <div href="#" class="card-title">
+                      Attack Power: <span class="span" style="margin-left: 13%">7</span>
+                    </div>
                     
-                  </div>
-                  <div class="card-wrapper">
-                    <p class="card-price" style="color: white;">Attack Power:</a> <div class="card-price">7</div></p>
-                  </div>
+                  </h3>
+
+                  </h3>
+
+                 
 
                 </div>
 
@@ -775,64 +809,47 @@ Synopsis: This game was based on the ongoing Kdrama Movie Entitled “Duty After
             </li>
 
             <li class="scrollbar-item">
-              <div class="shop-card">
+              <div class="featured-game-card">
 
-                <figure class="card-banner img-holder" style="--width: 300; --height: 260;">
-                  <img src="./assets/images/4.jpg" width="300" height="260" loading="lazy"
-                    alt="Women Black T-Shirt" class="img-cover">
+                <figure class="card-banner img-holder" style="--width: 450; --height: 600;">
+                  <img src="./assets/images/4.jpg" width="450" height="600" loading="lazy"
+                    alt="Need for Speed" class="img-cover">
                 </figure>
 
                 <div class="card-content">
 
-                  <a href="#" class="card-badge skewBg">Tunnel</a>
-
                   <h3 class="h3">
-                    <a href="#" class="card-title">Alien Soldier (Medium)</a>
+                    <a href="#" class="card-title" tabindex="-1">
+                      <a href="#" class="card-badge skewBg">Alien Soldier (Medium)</a>
+                    </a>
                   </h3>
 
-                  <div class="card-wrapper">
-                    <p class="card-price" style="color: white;">Health Points:</a> <div class="card-price ">80</div></p>
-                    
-                  </div>
-                  <div class="card-wrapper">
-                    <p class="card-price" style="color: white;">Movement Speed:</a> <div class="card-price" style="padding-right: 25px;">10</div></p>
-                    
-                  </div>
-                  <div class="card-wrapper">
-                    <p class="card-price" style="color: white;">Attack Power:</a> <div class="card-price">5</div></p>
-                  </div>
+                  <!-- <span class="card-meta">
+                    <ion-icon name="notifications"></ion-icon>
+
+                    <!-- <span class="span">Playstation 5, Xbox</span> -->
+                  </span>
                 </div>
 
-              </div>
-            </li>
-            <li class="scrollbar-item">
-              <div class="shop-card">
+                <div class="card-content-overlay" style="text-align: justify-all;">
 
-                <figure class="card-banner img-holder" style="--width: 300; --height: 260;">
-                  <img src="./assets/images/1.jpg" width="300" height="260" loading="lazy"
-                    alt="Virtual Reality Smiled" class="img-cover">
-                </figure>
-
-                <div class="card-content">
-
-                  <a href="#" class="card-badge skewBg">Oil Rig</a>
+                   <img src="./assets/images/02.png" width="150" height="150" loading="lazy" alt=""
+                    class="card-icon">
 
                   <h3 class="h3">
-                    <a href="#" class="card-title">Ant Monster (Hard)</a>
+                    <div href="#" class="card-title">
+                      Health Points: <span class="span" style="margin-left: 8%"> 80</span>
+                    </div>
+
+                    
+                    <div href="#" class="card-title">
+                      Movement Speed: <span class="span">10</span>
+                    </div>
+                    <div href="#" class="card-title">
+                      Attack Power: <span class="span" style="margin-left: 13%">5</span>
+                    </div>
+                    
                   </h3>
-
-
-                  <div class="card-wrapper">
-                    <p class="card-price" style="color: white;">Health Points:</a> <div class="card-price ">65</div></p>
-                    
-                  </div>
-                  <div class="card-wrapper">
-                    <p class="card-price" style="color: white;">Movement Speed:</a> <div class="card-price" style="padding-right: 25px;">8</div></p>
-                    
-                  </div>
-                  <div class="card-wrapper">
-                    <p class="card-price" style="color: white;">Attack Power:</a> <div class="card-price">7</div></p>
-                  </div> 
 
                   
 
@@ -842,43 +859,114 @@ Synopsis: This game was based on the ongoing Kdrama Movie Entitled “Duty After
             </li>
 
             <li class="scrollbar-item">
-              <div class="shop-card">
+              <div class="featured-game-card">
 
-                <figure class="card-banner img-holder" style="--width: 300; --height: 260;">
-                  <img src="./assets/images/2.jpg" width="300" height="260" loading="lazy"
-                    alt="Gears 5 Xbox Controller" class="img-cover">
+                <figure class="card-banner img-holder" style="--width: 450; --height: 600;">
+                  <img src="./assets/images/1.jpg" width="450" height="600" loading="lazy"
+                    alt="Need for Speed" class="img-cover">
                 </figure>
 
                 <div class="card-content">
 
-                  <a href="#" class="card-badge skewBg">city hall</a>
-
                   <h3 class="h3">
-                    <a href="#" class="card-title">Evil Robot (Expert)</a>
+                    <a href="#" class="card-title" tabindex="-1">
+                      <a href="#" class="card-badge skewBg">Ant Monster (Hard)</a>
+                    </a>
                   </h3>
 
-                  <div class="card-wrapper">
-                    <p class="card-price" style="color: white;">Health Points:</a> <div class="card-price ">10</div></p>
+                  <!-- <span class="card-meta">
+                    <ion-icon name="notifications"></ion-icon>
+
+                    <!-- <span class="span">Playstation 5, Xbox</span> -->
+                  </span>
+                </div>
+
+                <div class="card-content-overlay" style="text-align: justify-all;">
+
+                  <img src="./assets/images/03.png" width="150" height="150" loading="lazy" alt=""
+                    class="card-icon">
+
+                  <h3 class="h3">
+                    <div href="#" class="card-title">
+                      Health Points: <span class="span" style="margin-left: 8%"> 65</span>
+                    </div>
+
                     
-                  </div>
-                  <div class="card-wrapper">
-                    <p class="card-price" style="color: white;">Movement Speed:</a> <div class="card-price" style="padding-right: 25px;">9</div></p>
+                    <div href="#" class="card-title">
+                      Movement Speed: <span class="span">8</span>
+                    </div>
+                    <div href="#" class="card-title">
+                      Attack Power: <span class="span" style="margin-left: 13%">7</span>
+                    </div>
                     
-                  </div>
-                  <div class="card-wrapper">
-                    <p class="card-price" style="color: white;">Attack Power:</a> <div class="card-price">16</div></p>
-                  </div>
+                  </h3>
 
                   
+
+                </div>
 
               </div>
             </li>
 
-            
+            <li class="scrollbar-item">
+              <div class="featured-game-card">
+
+                <figure class="card-banner img-holder" style="--width: 450; --height: 600;">
+                  <img src="./assets/images/2.jpg" width="450" height="600" loading="lazy"
+                    alt="Need for Speed" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title" tabindex="-1">
+                      <a href="#" class="card-badge skewBg">Evil Robot (Expert)</a>
+                    </a>
+                  </h3>
+
+                  <!-- <span class="card-meta">
+                    <ion-icon name="notifications"></ion-icon>
+
+                    <!-- <span class="span">Playstation 5, Xbox</span> -->
+                  </span>
+                </div>
+
+                <div class="card-content-overlay" style="text-align: justify-all;">
+
+                  <img src="./assets/images/04.png" width="150" height="150" loading="lazy" alt=""
+                    class="card-icon">
+
+                  <h3 class="h3">
+                    <div href="#" class="card-title">
+                      Health Points: <span class="span" style="margin-left: 8%"> 10</span>
+                    </div>
+
+                    
+                    <div href="#" class="card-title">
+                      Movement Speed: <span class="span">9</span>
+                    </div>
+                    <div href="#" class="card-title">
+                      Attack Power: <span class="span" >16</span>
+                    </div>
+                    
+                  </h3>
+
+                  
+
+                </div>
+
+              </div>
+            </li>
 
             
 
           </ul>
+
+
+
+
+
+
 
         </div>
       </section>
@@ -1291,7 +1379,7 @@ Synopsis: This game was based on the ongoing Kdrama Movie Entitled “Duty After
       <section class="newsletter" aria-label="newsletter">
         <div class="container">
  <h2 class="h2 section-title">
-            Contact <span class="span">Informations</span>
+            Contact <span class="span" >Informations</span>
           </h2>
           <div class="newsletter-card" style="text-align: center; align-items: center;">
 
